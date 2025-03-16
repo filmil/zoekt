@@ -18,7 +18,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt/query"
 )
 
 func Test_breakOnNewlines(t *testing.T) {

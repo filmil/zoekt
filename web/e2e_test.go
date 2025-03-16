@@ -26,8 +26,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/query"
 )
 
 // TODO(hanwen): cut & paste from ../ . Should create internal test

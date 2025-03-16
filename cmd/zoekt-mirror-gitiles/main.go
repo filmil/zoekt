@@ -24,7 +24,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/google/zoekt/gitindex"
+	"github.com/filmil/zoekt/gitindex"
 )
 
 type crawlTarget struct {

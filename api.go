@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt/query"
 )
 
 // FileMatch contains all the matches within a file.

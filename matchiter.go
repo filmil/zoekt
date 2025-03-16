@@ -20,7 +20,7 @@ import (
 	"sort"
 	"unicode/utf8"
 
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt/query"
 )
 
 // candidateMatch is a candidate match for a substring.

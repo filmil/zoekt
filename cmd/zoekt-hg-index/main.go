@@ -21,9 +21,9 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/build"
-	"github.com/google/zoekt/cmd"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/build"
+	"github.com/filmil/zoekt/cmd"
 
 	"go.uber.org/automaxprocs/maxprocs"
 	"humungus.tedunangst.com/r/gerc"

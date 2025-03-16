@@ -36,8 +36,8 @@ import (
 	"sync"
 
 	"github.com/bmatcuk/doublestar"
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/ctags"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/ctags"
 )
 
 var DefaultDir = filepath.Join(os.Getenv("HOME"), ".zoekt")

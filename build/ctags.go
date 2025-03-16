@@ -24,8 +24,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/ctags"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/ctags"
 )
 
 func runCTags(bin string, inputs map[string][]byte) ([]*ctags.Entry, error) {

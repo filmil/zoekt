@@ -21,8 +21,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/build"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/build"
 )
 
 func TestIndexEmptyRepo(t *testing.T) {

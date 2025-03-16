@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/query"
 )
 
 type crashSearcher struct{}

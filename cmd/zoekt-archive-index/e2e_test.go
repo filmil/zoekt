@@ -15,10 +15,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/build"
-	"github.com/google/zoekt/query"
-	"github.com/google/zoekt/shards"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/build"
+	"github.com/filmil/zoekt/query"
+	"github.com/filmil/zoekt/shards"
 )
 
 func TestMain(m *testing.M) {

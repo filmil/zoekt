@@ -27,8 +27,8 @@ import (
 	"golang.org/x/net/trace"
 	"golang.org/x/sync/semaphore"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/query"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 )

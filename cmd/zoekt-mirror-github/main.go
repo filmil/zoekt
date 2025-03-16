@@ -33,7 +33,7 @@ import (
 	"github.com/google/go-github/v27/github"
 	"golang.org/x/oauth2"
 
-	"github.com/google/zoekt/gitindex"
+	"github.com/filmil/zoekt/gitindex"
 )
 
 type topicsFlag []string

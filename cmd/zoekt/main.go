@@ -24,9 +24,9 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/query"
-	"github.com/google/zoekt/shards"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/query"
+	"github.com/filmil/zoekt/shards"
 )
 
 func displayMatches(files []zoekt.FileMatch, pat string, withRepo bool, list bool) {

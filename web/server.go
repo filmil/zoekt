@@ -31,8 +31,8 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/google/zoekt"
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt"
+	"github.com/filmil/zoekt/query"
 )
 
 var Funcmap = template.FuncMap{

@@ -20,7 +20,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt/query"
 )
 
 var opnames = map[syntax.Op]string{

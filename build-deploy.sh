@@ -20,7 +20,7 @@ mkdir -p ${out}
 
 for d in $(find cmd  -maxdepth 1 -type d)
 do
-  go build -tags netgo -ldflags "-X github.com/google/zoekt.Version=$VERSION"  -o ${out}/$(basename $d) github.com/google/zoekt/$d
+  go build -tags netgo -ldflags "-X github.com/filmil/zoekt.Version=$VERSION"  -o ${out}/$(basename $d) github.com/filmil/zoekt/$d
 done
 
 cat <<EOF > ${out}/deploy.sh

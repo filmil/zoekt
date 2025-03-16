@@ -19,7 +19,7 @@ import (
 	"hash/crc64"
 	"unicode/utf8"
 
-	"github.com/google/zoekt/query"
+	"github.com/filmil/zoekt/query"
 )
 
 // indexData holds the pattern-independent data that we have to have

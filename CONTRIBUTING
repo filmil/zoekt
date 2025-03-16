@@ -8,7 +8,7 @@ For submitting patches, please use gerrit:
 
 * Make sure all tests pass:
 
-    go test github.com/google/zoekt/...
+    go test github.com/filmil/zoekt/...
 
 * Add the following to your .git/config:
 
