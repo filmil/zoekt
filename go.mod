@@ -1,4 +1,4 @@
-module github.com/google/zoekt
+module github.com/filmil/zoekt
 
 go 1.13
 
