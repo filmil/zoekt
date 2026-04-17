@@ -1,4 +1,9 @@
 
+[![Test](https://github.com/filmil/zoekt/actions/workflows/test.yml/badge.svg)](https://github.com/filmil/zoekt/actions/workflows/test.yml)
+[![Release](https://github.com/filmil/zoekt/actions/workflows/release.yml/badge.svg)](https://github.com/filmil/zoekt/actions/workflows/release.yml)
+
+---
+
     "Zoekt, en gij zult spinazie eten" - Jan Eertink
 
     ("seek, and ye shall eat spinach" - My primary school teacher)
