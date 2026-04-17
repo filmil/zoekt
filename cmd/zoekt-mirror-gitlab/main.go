@@ -74,8 +74,10 @@ func main() {
 	}
 	apiToken := strings.TrimSpace(string(content))
 
-	client := gitlab.NewClient(nil, apiToken)
-	client.SetBaseURL(*gitlabURL)
+	client, err := gitlab.NewClient(apiToken, gitlab.WithBaseURL(*gitlabURL))
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	opt := &gitlab.ListProjectsOptions{
 		ListOptions: gitlab.ListOptions{
