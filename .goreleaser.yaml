@@ -1,0 +1,203 @@
+version: 2
+project_name: zoekt
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/{{ .ProjectName }}
+    id: zoekt
+    binary: zoekt
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-archive-index
+    id: zoekt-archive-index
+    binary: zoekt-archive-index
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-git-clone
+    id: zoekt-git-clone
+    binary: zoekt-git-clone
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-git-index
+    id: zoekt-git-index
+    binary: zoekt-git-index
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-index
+    id: zoekt-index
+    binary: zoekt-index
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-indexserver
+    id: zoekt-indexserver
+    binary: zoekt-indexserver
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-mirror-bitbucket-server
+    id: zoekt-mirror-bitbucket-server
+    binary: zoekt-mirror-bitbucket-server
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-mirror-gerrit
+    id: zoekt-mirror-gerrit
+    binary: zoekt-mirror-gerrit
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-mirror-github
+    id: zoekt-mirror-github
+    binary: zoekt-mirror-github
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-mirror-gitiles
+    id: zoekt-mirror-gitiles
+    binary: zoekt-mirror-gitiles
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-mirror-gitlab
+    id: zoekt-mirror-gitlab
+    binary: zoekt-mirror-gitlab
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-repo-index
+    id: zoekt-repo-index
+    binary: zoekt-repo-index
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-test
+    id: zoekt-test
+    binary: zoekt-test
+
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/zoekt-webserver
+    id: zoekt-webserver
+    binary: zoekt-webserver
+
+archives:
+  - format: tar.gz
+    # this name template makes the search be lowercase and replace spaces with hyphens
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
+    # use zip for windows archives
+    format_overrides:
+      - goos: windows
+        format: zip
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
