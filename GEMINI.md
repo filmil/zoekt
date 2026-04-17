@@ -26,3 +26,12 @@ Zoekt is a fast text search engine intended for use with source code. It consist
 * **Format Stability:** Zoekt indexes are persisted to disk. Any modifications to the index structure or serialization logic (`indexdata.go`, `write.go`, `read.go`) must be approached with extreme caution to maintain backward compatibility.
 * **Performance:** Zoekt is optimized for speed. Minimize memory allocations in the hot paths (search and matching).
 * **Testing:** Maintain comprehensive test coverage. *Note: When testing git submodule behavior locally, you must explicitly allow the file protocol (e.g., `git -c protocol.file.allow=always`) due to modern Git security defaults.*
+
+## Git Commit Rules
+* Use "conventional commits v1.0.0" for the commit title.
+* Append the following note to the last line of the commit message (below any summaries):
+  ```
+  This commit has been created by an automated coding assistant,
+  with human supervision.
+  ```
+* Additionally, append the exact prompt used to generate the commit in full.
